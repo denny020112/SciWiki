@@ -1,9 +1,11 @@
 ---
 layout: default
-title: 내 문서 목록
+title: Main Page
 ---
 
-# 문서 목록
+# SciWiki
+개인 문서 저장소 겸 개인 위키. 
+공사중!
 
 {% for file in site.pages %}
   {% if file.name contains '.md' %}
