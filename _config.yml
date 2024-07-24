@@ -1,6 +1,7 @@
 title: SciWiki
 description: My personal notes of what I learned.
-theme: jekyll-theme-minimal
+theme: jekyll-theme-monos
+
 
 defaults:
   -
