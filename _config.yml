@@ -1,3 +1,10 @@
 title: SciWiki
-description: My Personal notes of what I learned.
+description: My personal notes of what I learned.
 theme: jekyll-theme-minimal
+
+defaults:
+  -
+    scope:
+      path: "" # 모든 파일에 적용
+    values:
+      layout: default # 기본 레이아웃 설정
