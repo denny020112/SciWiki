@@ -30,7 +30,7 @@ debugInConsole: false # Print debug info in Obsidian console
 
 ## 정의
 선적분은 곡선에 있는 모든 점에 대해 함수나 벡터장의 적분을 구하는 것이다. 
-장(field)에 대한 선적분은 스칼라장이나 벡터장을 특정 경로 곡선 C를 따라 적분하는 것을 의미한다.
+장(field)에 대한 선적분은 스칼라장이나 벡터장을 특정 경로 곡선 $C$를 따라 적분하는 것을 의미한다.
 
 ## 핵심 원리
 1. 곡선을 따라 적분한다
@@ -46,7 +46,7 @@ debugInConsole: false # Print debug info in Obsidian console
 
 $$ \int_C f(x,y) ds = \int_a^b f(x(t),y(t)) \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2} dt $$
 
-여기서 $(x(t),y(t))$는 곡선 C의 매개변수 표현이며, $a \leq t \leq b$이다.
+여기서 $(x(t),y(t))$는 곡선 $C$의 매개변수 표현이며, $a \leq t \leq b$이다.
 
 ### 벡터장의 선적분
 
@@ -54,7 +54,11 @@ $$ \int_C f(x,y) ds = \int_a^b f(x(t),y(t)) \sqrt{\left(\frac{dx}{dt}\right)^2 +
 벡터장 $\mathbf{F}(x,y) = P(x,y)\mathbf{i} + Q(x,y)\mathbf{j}$의 선적분은 다음과 같이 정의된다:
 
 $$ \int_C \mathbf{F} \cdot d\mathbf{r} = \int_a^b [P(x(t),y(t))\frac{dx}{dt} + Q(x(t),y(t))\frac{dy}{dt}] dt $$
+#### 물리적 예시
+##### 일의 계산
+일에 대한 자세한 내용은 문서 참고
 
+일의 정의는 $$\vec{W}=\vec{F}\cdot d$$
 ## 적용 예시
 - 물리학: 일의 계산. 
 	- 물리 실험에서 일이나 전위차를 측정하여 선적분의 결과를 검증할 수 있다.
