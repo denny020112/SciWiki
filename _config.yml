@@ -1,13 +1,14 @@
 title: SciWiki
 description: My personal notes of what I learned.
-theme: jekyll-theme-dinky
-
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-treehouse
 
 defaults:
   -
     scope:
       path: "" # 모든 파일에 적용
     values:
-      layout: .layout/default # 기본 레이아웃 설정
+      layout: default # 기본 레이아웃 설정
 
 exclude: [".obsidian", ".trash", ".gitignore", "_config.yml", "Gemfile", "Gemfile.lock"]

@@ -1,76 +1,44 @@
+---
+layout: default
+---
+
 <!DOCTYPE html>
-<html lang="ko">
-<head>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title | default: site.title }}</title>
-    <style>
-        /* 이전 CSS 스타일 유지 */
-    </style>
-</head>
-<body>
-    <div id="sidebar">
-        <h2>문서 목록</h2>
-        <ul id="fileTree"></ul>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+
+        {% if site.logo %}
+          <img src="{{site.logo | relative_url}}" alt="Logo" />
+        {% endif %}
+
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
+
+        {% treehouse_menu %}
+
+      </header>
+      <section>
+
+      {{ content }}
+
+      </section>
+      <footer>
+        {% if site.github.is_project_page %}
+        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        {% endif %}
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
-    <div id="content">
-        <h1>{{ page.title }}</h1>
-        {{ content }}
-    </div>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var fileTree = document.getElementById('fileTree');
-        var pages = [
-            {% for page in site.pages %}
-                {% unless page.path contains '.svg' or page.path contains '.png' or page.path contains '.jpg' or page.path contains '.jpeg' or page.path contains '.gif' %}
-                    "{{ page.path }}",
-                {% endunless %}
-            {% endfor %}
-        ];
-
-        function buildTree(paths) {
-            var tree = {};
-            paths.forEach(function(path) {
-                var parts = path.split('/');
-                var current = tree;
-                parts.forEach(function(part, index) {
-                    if (!current[part]) {
-                        current[part] = index === parts.length - 1 ? null : {};
-                    }
-                    current = current[part];
-                });
-            });
-            return tree;
-        }
-
-        function createTreeDOM(obj, ul) {
-            for (var k in obj) {
-                var li = document.createElement('li');
-                if (obj[k] === null) {
-                    li.innerHTML = '<a href="/' + k + '">' + k + '</a>';
-                } else {
-                    li.innerHTML = '<span class="folder">' + k + '</span>';
-                    var newUl = document.createElement('ul');
-                    newUl.className = 'nested';
-                    li.appendChild(newUl);
-                    createTreeDOM(obj[k], newUl);
-                }
-                ul.appendChild(li);
-            }
-        }
-
-        var tree = buildTree(pages);
-        createTreeDOM(tree, fileTree);
-
-        var folders = document.getElementsByClassName('folder');
-        for (var i = 0; i < folders.length; i++) {
-            folders[i].addEventListener('click', function() {
-                this.parentElement.querySelector('.nested').classList.toggle('active');
-                this.classList.toggle('folder-open');
-            });
-        }
-    });
-    </script>
-</body>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+  </body>
 </html>
