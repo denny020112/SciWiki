@@ -60,21 +60,6 @@
     <div id="sidebar">
         <h2>문서 목록</h2>
         <ul id="fileTree">
-        {% assign sorted_files = site.static_files | sort: "path" %}
-        {% for file in sorted_files %}
-            {% if file.extname == '.md' %}
-                {% assign path_parts = file.path | split: "/" %}
-                <li data-path="{{ file.path }}">
-                    {% for part in path_parts %}
-                        {% if forloop.last %}
-                            <a href="{{ file.path | relative_url }}">{{ part }}</a>
-                        {% else %}
-                            {{ part }}/
-                        {% endif %}
-                    {% endfor %}
-                </li>
-            {% endif %}
-        {% endfor %}
         </ul>
     </div>
     <div id="content">
@@ -85,39 +70,43 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         var fileTree = document.getElementById('fileTree');
-        var files = fileTree.getElementsByTagName('li');
+        var pages = [
+            {% for page in site.pages %}
+                {% unless page.path contains '.svg' or page.path contains '.png' or page.path contains '.jpg' or page.path contains '.jpeg' or page.path contains '.gif' %}
+                    "{{ page.path }}",
+                {% endunless %}
+            {% endfor %}
+        ];
+
         var tree = {};
 
-        for (var i = 0; i < files.length; i++) {
-            var path = files[i].getAttribute('data-path').split('/');
-            var currentLevel = tree;
-
-            for (var j = 1; j < path.length; j++) {
-                var part = path[j];
-                if (!currentLevel[part]) {
-                    currentLevel[part] = j === path.length - 1 ? files[i].innerHTML : {};
+        pages.forEach(function(path) {
+            var parts = path.split('/');
+            var current = tree;
+            parts.forEach(function(part, index) {
+                if (!current[part]) {
+                    current[part] = index === parts.length - 1 ? null : {};
                 }
-                currentLevel = currentLevel[part];
-            }
-        }
+                current = current[part];
+            });
+        });
 
         function createTree(obj, ul) {
             for (var k in obj) {
                 var li = document.createElement('li');
-                if (typeof obj[k] === 'object') {
+                if (obj[k] === null) {
+                    li.innerHTML = '<a href="/' + k + '">' + k + '</a>';
+                } else {
                     li.innerHTML = '<span class="folder">' + k + '</span>';
                     var newUl = document.createElement('ul');
                     newUl.className = 'nested';
                     li.appendChild(newUl);
                     createTree(obj[k], newUl);
-                } else {
-                    li.innerHTML = obj[k];
                 }
                 ul.appendChild(li);
             }
         }
 
-        fileTree.innerHTML = '';
         createTree(tree, fileTree);
 
         var folders = document.getElementsByClassName('folder');
