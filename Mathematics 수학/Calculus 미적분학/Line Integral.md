@@ -31,6 +31,13 @@ debugInConsole: false # Print debug info in Obsidian console
 ## 정의
 선적분은 곡선에 있는 모든 점에 대해 함수나 벡터장의 적분을 구하는 것이다. 
 장(field)에 대한 선적분은 스칼라장이나 벡터장을 특정 경로 곡선 $C$를 따라 적분하는 것을 의미한다.
+### 수학적 의미
+변수 $s$에 대한 곡선 $C$에서의 함수 $f(x,y)$의 선적분은 다음과 같이 구분구적법[^1]으로 나타낼 수 있다. 
+$$\int_{C}f(x,y)ds=\lim\limits_{|P|\to0}\sum_{i=1}^{n}f(\bar{x}_{i},\bar{y}_{i})\Delta s_{i}$$
+
+즉, $C$라는 곡선 경로 위에서, 잘게 쪼갠 $s$에 대해 주어진 함수를 적분하면 공간상에서 우변의 값에 대응하는 면적이 나온다. 
+#### 대상 확인
+선적분을 할 때 중요한 것은 선적분의 대상, 즉 피함수의 성질을 판별하는 것이다. 성질은 크게 두가지로 나뉘는데 피함수가 스칼라 함수인 경우와 피함수가 벡터 함수인 경우이다. 각각의 경우에는 스칼라장에서의 선적분과 벡터장에서의 선적분으로 갈리기 때문에 다르게 보아야 한다.
 
 ## 핵심 원리
 1. 곡선을 따라 적분한다
@@ -74,3 +81,4 @@ $$ \int_C \mathbf{F} \cdot d\mathbf{r} = \int_a^b [P(x(t),y(t))\frac{dx}{dt} + Q
 1. Stewart, J. (2015). Calculus: Early Transcendentals. Cengage Learning.
 2. Kreyszig, E. (2011). Advanced Engineering Mathematics. John Wiley & Sons.
 
+[^1]: 더 엄밀히 말하자면면 리만 합으로 나타낸 것이다.
