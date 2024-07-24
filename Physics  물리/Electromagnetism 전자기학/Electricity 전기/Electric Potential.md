@@ -14,7 +14,6 @@ tags:
   - 전기
   - 물리
 ---
-
 ```table-of-contents
 title: 
 style: nestedList # TOC style (nestedList|nestedOrderedList|inlineFirstLevel)
