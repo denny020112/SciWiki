@@ -1,2 +1,13 @@
-yml highlighter-theme: monokai //you can change your syntax color scheme. 
-date_format: "%Y-%M-%D" //and date format.
+title: SciWiki
+description: My personal notes of what I learned.
+theme: jekyll-theme-dinky
+
+
+defaults:
+  -
+    scope:
+      path: "" # 모든 파일에 적용
+    values:
+      layout: .layout/default # 기본 레이아웃 설정
+
+exclude: [".obsidian", ".trash", ".gitignore", "_config.yml", "Gemfile", "Gemfile.lock"]
