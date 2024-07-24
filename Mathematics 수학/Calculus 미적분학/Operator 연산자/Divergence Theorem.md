@@ -1,4 +1,5 @@
 ---
+layout: default
 aliases:
   - 발산정리
   - 가우스정리
