@@ -12,7 +12,7 @@
             font-family: Arial, sans-serif;
         }
         #sidebar {
-            width: 250px;
+            width: 300px;
             height: 100vh;
             overflow-y: auto;
             padding: 20px;
@@ -24,12 +24,28 @@
             height: 100vh;
             overflow-y: auto;
         }
+        .folder {
+            cursor: pointer;
+            user-select: none;
+        }
+        .folder::before {
+            content: "\25B6";
+            color: black;
+            display: inline-block;
+            margin-right: 6px;
+        }
+        .folder-open::before {
+            transform: rotate(90deg);
+        }
+        .nested {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
         #sidebar ul {
             list-style-type: none;
-            padding: 0;
-        }
-        #sidebar li {
-            margin-bottom: 10px;
+            padding-left: 20px;
         }
         #sidebar a {
             text-decoration: none;
@@ -43,10 +59,20 @@
 <body>
     <div id="sidebar">
         <h2>문서 목록</h2>
-        <ul>
-        {% for file in site.pages %}
-            {% if file.name contains '.md' and file.name != 'index.md' %}
-                <li><a href="{{ file.url | relative_url }}">{{ file.title | default: file.name | remove: '.md' }}</a></li>
+        <ul id="fileTree">
+        {% assign sorted_files = site.static_files | sort: "path" %}
+        {% for file in sorted_files %}
+            {% if file.extname == '.md' %}
+                {% assign path_parts = file.path | split: "/" %}
+                <li data-path="{{ file.path }}">
+                    {% for part in path_parts %}
+                        {% if forloop.last %}
+                            <a href="{{ file.path | relative_url }}">{{ part }}</a>
+                        {% else %}
+                            {{ part }}/
+                        {% endif %}
+                    {% endfor %}
+                </li>
             {% endif %}
         {% endfor %}
         </ul>
@@ -55,5 +81,53 @@
         <h1>{{ page.title }}</h1>
         {{ content }}
     </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var fileTree = document.getElementById('fileTree');
+        var files = fileTree.getElementsByTagName('li');
+        var tree = {};
+
+        for (var i = 0; i < files.length; i++) {
+            var path = files[i].getAttribute('data-path').split('/');
+            var currentLevel = tree;
+
+            for (var j = 1; j < path.length; j++) {
+                var part = path[j];
+                if (!currentLevel[part]) {
+                    currentLevel[part] = j === path.length - 1 ? files[i].innerHTML : {};
+                }
+                currentLevel = currentLevel[part];
+            }
+        }
+
+        function createTree(obj, ul) {
+            for (var k in obj) {
+                var li = document.createElement('li');
+                if (typeof obj[k] === 'object') {
+                    li.innerHTML = '<span class="folder">' + k + '</span>';
+                    var newUl = document.createElement('ul');
+                    newUl.className = 'nested';
+                    li.appendChild(newUl);
+                    createTree(obj[k], newUl);
+                } else {
+                    li.innerHTML = obj[k];
+                }
+                ul.appendChild(li);
+            }
+        }
+
+        fileTree.innerHTML = '';
+        createTree(tree, fileTree);
+
+        var folders = document.getElementsByClassName('folder');
+        for (var i = 0; i < folders.length; i++) {
+            folders[i].addEventListener('click', function() {
+                this.parentElement.querySelector('.nested').classList.toggle('active');
+                this.classList.toggle('folder-open');
+            });
+        }
+    });
+    </script>
 </body>
 </html>
