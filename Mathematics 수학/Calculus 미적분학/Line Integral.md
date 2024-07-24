@@ -13,12 +13,24 @@ tags:
   - 적분
   - 벡터장
   - 경로
+  - 수학
+  - 미적분학
+  - 물리
 ---
 
-# 선적분
+```table-of-contents
+title: 
+style: nestedList # TOC style (nestedList|nestedOrderedList|inlineFirstLevel)
+minLevel: 0 # Include headings from the specified level
+maxLevel: 0 # Include headings up to the specified level
+includeLinks: true # Make headings clickable
+debugInConsole: false # Print debug info in Obsidian console
+```
+# 선적분 (line integral)
 
 ## 정의
-선적분은 곡선을 따라 함수나 벡터장을 적분하는 방법이다. 스칼라장이나 벡터장을 곡선 C를 따라 적분하는 것을 의미한다.
+선적분은 곡선에 있는 모든 점에 대해 함수나 벡터장의 적분을 구하는 것이다. 
+장(field)에 대한 선적분은 스칼라장이나 벡터장을 특정 경로 곡선 C를 따라 적분하는 것을 의미한다.
 
 ## 핵심 원리
 1. 곡선을 따라 적분한다
@@ -28,6 +40,8 @@ tags:
 ## 상세 설명
 
 ### 스칼라장의 선적분
+![[scalar field line integral 2D.png|450]]
+![[scalar field line integral 3D.png|450]]
 스칼라 함수 $f(x,y)$의 선적분은 다음과 같이 정의된다:
 
 $$ \int_C f(x,y) ds = \int_a^b f(x(t),y(t)) \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2} dt $$
@@ -35,49 +49,24 @@ $$ \int_C f(x,y) ds = \int_a^b f(x(t),y(t)) \sqrt{\left(\frac{dx}{dt}\right)^2 +
 여기서 $(x(t),y(t))$는 곡선 C의 매개변수 표현이며, $a \leq t \leq b$이다.
 
 ### 벡터장의 선적분
+
+![[vector field line integral.png|500]]
 벡터장 $\mathbf{F}(x,y) = P(x,y)\mathbf{i} + Q(x,y)\mathbf{j}$의 선적분은 다음과 같이 정의된다:
 
 $$ \int_C \mathbf{F} \cdot d\mathbf{r} = \int_a^b [P(x(t),y(t))\frac{dx}{dt} + Q(x(t),y(t))\frac{dy}{dt}] dt $$
 
 ## 적용 예시
-- 물리학: 일의 계산
+- 물리학: 일의 계산. 
+	- 물리 실험에서 일이나 전위차를 측정하여 선적분의 결과를 검증할 수 있다.
 - 전자기학: 전위차 계산
 - 유체역학: 유량 계산
-
-## 역사적 배경
-선적분의 개념은 17세기 말 뉴턴과 라이프니츠에 의해 개발된 미적분학의 확장으로 발전했다.
-
-## 실험적 증거
-물리 실험에서 일이나 전위차를 측정하여 선적분의 결과를 검증할 수 있다.
-
-## 한계와 예외
-폐곡선에서의 선적분은 그린 정리를 통해 영역 적분으로 변환할 수 있다.
-
 ## 관련 개념
-- [[그린 정리]]
+- [[그린 정리]]: 폐곡선에서의 선적분은 그린 정리를 통해 영역 적분으로 변환할 수 있다.
 - [[스토크스 정리]]
 - [[보존장]]
 
-## 응용 분야
-- 물리학
-- 공학
-- 경제학
-
-## 최근 연구 동향
-복잡한 다차원 공간에서의 선적분 계산 방법에 대한 연구가 진행 중이다.
-
-## 학습 팁
-1. 매개변수 표현에 익숙해지자
-2. 벡터장의 시각화 연습하기
-3. 물리적 의미를 이해하며 공부하기
-
-## 연습 문제
-1. 곡선 $C: x=t, y=t^2, 0 \leq t \leq 1$을 따라 $f(x,y)=x+y$의 선적분을 구하시오.
-2. 벡터장 $\mathbf{F}(x,y) = y\mathbf{i} + x\mathbf{j}$에 대해 원점에서 (1,1)까지의 선적분을 구하시오.
 
 ## 참고문헌
 1. Stewart, J. (2015). Calculus: Early Transcendentals. Cengage Learning.
 2. Kreyszig, E. (2011). Advanced Engineering Mathematics. John Wiley & Sons.
 
-## 추가 노트
-선적분은 보존장과 비보존장을 구분하는 중요한 도구이며, 물리학에서 일-에너지 정리의 수학적 기초가 된다.
