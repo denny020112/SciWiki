@@ -3,7 +3,7 @@ layout: default
 title: Main Page
 ---
 
-# SciWiki
+# Homepage
 개인 문서 저장소 겸 개인 위키. 
 공사중!
 
