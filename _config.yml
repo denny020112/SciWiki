@@ -8,6 +8,6 @@ defaults:
     scope:
       path: "" # 모든 파일에 적용
     values:
-      layout: default # 기본 레이아웃 설정
+      layout: .layout/default # 기본 레이아웃 설정
 
 exclude: [".obsidian", ".trash", ".gitignore", "_config.yml", "Gemfile", "Gemfile.lock"]
