@@ -1,5 +1,5 @@
 #MATLAB 
-![[SciWiki/Attachement/scalar field visualisation.png]]
+![[scalar field visualisation.png]]
 ```MATLAB
 % 그리드 생성
 [x, y] = meshgrid(-3:0.1:3, -3:0.1:3);

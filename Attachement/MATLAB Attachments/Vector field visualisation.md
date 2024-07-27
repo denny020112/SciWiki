@@ -1,5 +1,5 @@
 #MATLAB 
-![[SciWiki/Attachement/vector field visualisation.png]]
+![[vector field visualisation.png]]
 ```MATLAB
 % 그리드 생성
 [x, y] = meshgrid(-2:0.2:2, -2:0.2:2);
