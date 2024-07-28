@@ -35,7 +35,8 @@ debugInConsole: false # Print debug info in Obsidian console
 ## 상세 설명
 
 뉴턴의 운동 법칙에 따르면 물체에 작용하는 합력(net force) 
-$$\vec{F}$$와 물체의 질량 $$m$$, 가속도 $$\vec{a}$$사이에는 다음 관계가 성립한다:
+$$\vec{F}$$
+물체의 질량 $$m$$가속도 $$\vec{a}$$사이에는 다음 관계가 성립한다:
 
 $$\vec{F} = m\vec{a}$$
 
