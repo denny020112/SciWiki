@@ -67,6 +67,13 @@ $$ \mathbf{E} = -\nabla V $$
 
 여기서 $V$는 전위이다.
 
+나블라의 사용이 익숙하지 않은 경우를 위해 나블라를 사용하지 않는 방식으로 정리하기 위해 퍼텐셜 에너지의 정의에서부터 천천히 확인해보도록 하자.
+$$U=-\int_{R}^{P}\vec{F}\cdot d\vec{r}$$
+전기장의 정의($q\vec{E}=\vec{F}$)를 이용해 사용하며 식을 변형해보면 다음과 같다:
+$$U=-\int_{R}^{P}\vec{F}\cdot d\vec{r}=-q\int_{R}^{P}\vec{E}\cdot d\vec{r}$$
+이때 전기 퍼텐셜의 정의($qV=U$)를 적용하면
+$$U=-q\int_{R}^{P}\vec{E}\cdot d\vec{r}\ \ \longrightarrow V=-\int_{R}^{P}\vec{E}\cdot d\vec{r}$$
+즉, 전기장은 퍼텐셜의 음의 기울기라는 것이 적분의 형태로 표현됨을 알 수 있다.
 
 ### 전기장의 에너지 밀도
 
