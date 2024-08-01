@@ -79,14 +79,14 @@ $$U=-q\int_{R}^{P}\vec{E}\cdot d\vec{r}\ \ \longrightarrow V=-\int_{R}^{P}\vec{E
 
 단위 부피당 저장된 에너지:
 
-$$ u = \frac{1}{2} \epsilon_0 E^2 $$
+$$ u = \frac{1}{2} \varepsilon_0 E^2 $$
 
 ### 가우스 법칙
 *[[Gauss's Law|가우스 법칙]] 문서 참고*
 
 전기장과 전하 분포의 관계를 나타내는 법칙:
 
-$$ \oint \mathbf{E} \cdot d\mathbf{A} = \frac{Q_{enc}}{\epsilon_0} $$
+$$ \oint \mathbf{E} \cdot d\mathbf{A} = \frac{Q_{enc}}{\varepsilon_0} $$
 
 여기서 $Q_{enc}$는 폐곡면 내부의 총 전하량이다.
 
