@@ -27,8 +27,8 @@ debugInConsole: false # Print debug info in Obsidian console
 분석화학은 물질의 화학적 조성과 구조를 규명하는 화학의 한 분야다. 주요 목표는 시료 내 성분의 정성 및 정량 분석이다.
 
 ## 핵심 원리
-1. 정성분석: 시료에 어떤 성분이 들어있는지 확인
-2. 정량분석: 각 성분의 양을 측정
+1. [[qualitative analysis|정성분석]]: 시료에 어떤 성분이 들어있는지 확인
+2. [[quantitative analysis|정량분석]]: 각 성분의 양을 측정
 3. 정밀도와 정확도: 측정의 재현성과 참값에 대한 근접성
 4. 검출한계: 검출 가능한 최소 농도
 5. 선택성: 특정 성분만을 선택적으로 분석하는 능력
@@ -38,7 +38,7 @@ debugInConsole: false # Print debug info in Obsidian console
 ### 분석 방법
 #### 고전적 분석
    - [[Gravimetric Analysis|중량분석]]: 질량 측정을 통한 분석
-   - 부피분석 (적정): 용액의 부피 측정을 통한 분석
+   - [[volumetric analysis|부피분석]] (적정): 용액의 부피 측정을 통한 분석
 
 #### 기기분석
    - 분광법: UV-Vis, IR, NMR 등을 이용한 분석
