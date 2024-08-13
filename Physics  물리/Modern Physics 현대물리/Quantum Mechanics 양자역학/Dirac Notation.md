@@ -104,8 +104,3 @@ debugInConsole: false # Print debug info in Obsidian console
 2. Sakurai, J. J., & Napolitano, J. (2017). Modern Quantum Mechanics. Cambridge University Press.
 3. Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information. Cambridge University Press.
 
-## 추가 학습 자료
-
-- MIT OpenCourseWare: Linear Algebra
-- Coursera: Quantum Mechanics and Quantum Computation
-- YouTube: 3Blue1Brown의 선형대수학 시리즈
