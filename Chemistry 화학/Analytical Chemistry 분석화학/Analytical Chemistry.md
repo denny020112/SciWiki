@@ -27,18 +27,28 @@ debugInConsole: false # Print debug info in Obsidian console
 분석화학은 물질의 화학적 조성과 구조를 규명하는 화학의 한 분야다. 주요 목표는 시료 내 성분의 정성 및 정량 분석이다.
 
 ## 핵심 원리
-1. [[qualitative analysis|정성분석]]: 시료에 어떤 성분이 들어있는지 확인
-2. [[quantitative analysis|정량분석]]: 각 성분의 양을 측정
-3. 정밀도와 정확도: 측정의 재현성과 참값에 대한 근접성
+
+
 4. 검출한계: 검출 가능한 최소 농도
 5. 선택성: 특정 성분만을 선택적으로 분석하는 능력
 
 ## 상세 설명
 
-### 분석 방법
+### 목적에 따른 분류
+#### 정성분석
+*자세한 내용은 [[Qualitative Analysis|정성분석]] 문서 참고*
+  
+ 시료에 어떤 성분이 들어있는지 확인하는 것을 목적으로 하는 분석을 의미한다.
+#### 정량분석
+*자세한 내용은 [[Quantitative Analysis|정량분석]] 문서 참고*
+
+시료 내의 각 성분의 양을 측정하여 성분의 상대적 양 혹은 농도 및 성분의 구성을 알아내는 것을 목적으로 하는 분석을 의미한다. 
+
+### 방법에 따른 분류
+
 #### 고전적 분석
    - [[Gravimetric Analysis|중량분석]]: 질량 측정을 통한 분석
-   - [[volumetric analysis|부피분석]] (적정): 용액의 부피 측정을 통한 분석
+   - [[Volumetric Analysis|부피분석]] (적정): 용액의 부피 측정을 통한 분석
 
 #### 기기분석
    - 분광법: UV-Vis, IR, NMR 등을 이용한 분석
@@ -51,23 +61,31 @@ debugInConsole: false # Print debug info in Obsidian console
 3. 측정: 적절한 분석 기기나 방법으로 측정
 4. 데이터 처리 및 해석: 통계적 처리와 결과 해석
 
-## 적용 예시
-- 환경 모니터링: 대기, 수질, 토양 오염 분석
-- 식품 및 의약품 분석: 성분 및 불순물 분석
-- 법화학: 범죄 현장의 증거 분석
-- 재료 분석: 신소재 개발 및 품질 관리
+## 용어
+### 물질
+#### 분석 물질 (Analyte)
+분석 대상을 의미한다
+#### 바탕질 (Matrix)
+분석 물질을 제외한 물질 전부를 의미한다. 분석 과정에서 변형되거나 반응을 거쳐도 상관 없다. 
 
+#### 표준물 (Standard substance)
+
+### 분석
+
+#### 정밀도
+
+측정의 재현성. 참값에 가깝지 않더라도 정밀도가 높으면 이는 해당 분석 혹은 실험 행위가 균일하게 이루어졌다는 것이다.
+#### 정확도
+
+참값에 대한 근접성
 
 ## 관련 개념
-- [[정성분석]]
-- [[정량분석]]
+- [[Qualitative Analysis|정성분석]]
+- [[Quantitative Analysis|정량분석]]
 - [[기기분석]]
 - [[Spectroscopy|분광법]]
-- [[크로마토그래피]]
+- [[Chromatography|크로마토그래피]]
 
 ## 참고문헌
 1. Skoog, D.A., West, D.M., Holler, F.J., Crouch, S.R. (2013). Fundamentals of Analytical Chemistry. Cengage Learning.
 2. Harris, D.C. (2010). Quantitative Chemical Analysis. W. H. Freeman and Company.
-
-## 추가 정보
-분석화학은 화학, 생물학, 환경과학 등 다양한 분야에 필수적인 도구를 제공한다. 정확하고 신뢰할 수 있는 데이터를 얻기 위한 방법론을 연구하고 개발하는 중요한 학문이다.
