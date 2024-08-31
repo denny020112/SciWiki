@@ -16,6 +16,7 @@ tags:
   - 입자
   - 파동함수
   - 물리
+  - 물리화학
 ---
 
 ```table-of-contents

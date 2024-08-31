@@ -13,7 +13,6 @@ related_concepts:
   - 연산자
 tags:
   - 양자역학
-  - 표기법
   - 선형대수학
   - 물리
   - 수학

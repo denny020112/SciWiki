@@ -15,6 +15,7 @@ tags:
   - 스펙트럼
   - 물리
   - 양자역학
+  - 물리화학
 ---
 
 ```table-of-contents
