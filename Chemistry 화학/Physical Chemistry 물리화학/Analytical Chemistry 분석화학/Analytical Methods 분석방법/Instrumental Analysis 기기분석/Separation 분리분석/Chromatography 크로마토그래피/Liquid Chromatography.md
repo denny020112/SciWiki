@@ -1,23 +1,16 @@
 ---
 aliases:
-  - Hartree-Fock method
-  - 하트리-폭 방법
+  - 액체 크로마토그래피
+  - LC
 category:
-  - 물리학
-  - 양자역학
-related_concepts:
-  - 고전역학
-  - 물리
-  - 스핀
-  - 각운동량
-tags:
-  - 물리
   - 화학
-  - 양자화학
-  - 양자역학
-  - 물리화학
-  - 계산화학
-  - 자기화학
+  - 분리분석
+  - 분석화학
+related_concepts:
+  - 크로마토그래피
+tags:
+  - 화학
+  - 분석화학
 ---
 
 ```table-of-contents
@@ -28,4 +21,8 @@ maxLevel: 0 # Include headings up to the specified level
 includeLinks: true # Make headings clickable
 debugInConsole: false # Print debug info in Obsidian console
 ```
+
+# 액체 크로마토그래피
+## 정의 및 개요
+### 구성
 

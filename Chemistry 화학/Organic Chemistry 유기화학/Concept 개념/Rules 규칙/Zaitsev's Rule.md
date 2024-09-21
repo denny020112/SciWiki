@@ -26,13 +26,14 @@ maxLevel: 0 # Include headings up to the specified level
 includeLinks: true # Make headings clickable
 debugInConsole: false # Print debug info in Obsidian console
 ```
+
 # 자이체프 규칙 (Zaitsev's Rule)
 
 ## 정의
-자이체프 규칙은 제거 반응에서 가장 치환된(더 안정한) 알켄이 주요 생성물로 형성된다는 경험적 규칙입니다.
+자이체프 규칙은 제거 반응에서 가장 치환된(더 안정한) 알켄이 주요 생성물로 형성된다는 경험적 규칙이다.
 
 ## 핵심 원리
-1. 더 치환된 알켄일수록 더 안정합니다.
+1. 더 치환된 알켄일수록 더 안정적이다
 2. 제거 반응에서는 열역학적으로 더 안정한 생성물이 우세하게 생성됩니다.
 3. 수소는 가장 적게 치환된 탄소에서 제거됩니다.
 

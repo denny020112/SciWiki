@@ -30,6 +30,7 @@ debugInConsole: false # Print debug info in Obsidian console
 # p-value (유의확률)
 
 ## 정의 및 개요
+
 p-value의 개념은 1920년대 로널드 피셔에 의해 도입되었다[^1]. p-value는 귀무가설이 참일 때, 관찰된 결과나 그보다 더 극단적인 결과가 나올 확률이다. 가설검정에서 귀무가설을 기각할지 결정하는 기준으로 사용된다.
 
 ## 핵심 원리
@@ -47,9 +48,10 @@ p-value는 다음과 같이 해석할 수 있다:
 p-value를 사용한 의사결정 과정:
 1. 유의수준 α 설정 (보통 0.05 또는 0.01)
 2. p-value 계산
-3. p-value가 α보다 작으면 귀무가설 기각, 그렇지 않으면 기각하지 않음
+3. **p-value가 α보다 작으면 귀무가설 기각, 그렇지 않으면 기각하지 않음**
 
 ## 수학적 표현
+
 양측검정에서의 p-value:
 
 $$p\text{-value} = P(|T| \geq |t| | H_0 \text{ is true})$$

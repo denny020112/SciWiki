@@ -34,7 +34,7 @@ debugInConsole: false # Print debug info in Obsidian console
 - 자외선-가시광선: 외부 전자 전이
 - 적외선: 분자 진동
 - 마이크로파: 분자 회전
-- 라디오파: 핵 스핀 ([[NMR|NMR]])
+- 라디오파: 핵 스핀 ([[Nuclear Magnetic Resonance Spectroscopy|NMR]])
 
 각 영역은 물질의 서로 다른 구조적, 동역학적 특성을 밝히는 데 사용된다.
 
